@@ -4,7 +4,17 @@ function eval() {
 }
 
 function expressionCalculator(expr) {
-    // write your solution here
+    if (expr.split("(").length !== expr.split(")").length) {
+        throw new Error("ExpressionError: Brackets must be paired.");
+    }
+    if (expr.includes('/ 0') === true ) {
+        throw new Error("TypeError: Division by zero.");
+    }
+
+    
+
+
+
 }
 
 module.exports = {
